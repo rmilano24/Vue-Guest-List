@@ -7,7 +7,8 @@ new Vue({
             eventDescription: 'It\'s back! This years summer festival will be in the beautiful countryside featuring our best line up ever!'
         },
         newNameText: '',
-        guestName: []
+        guestName: [],
+        formSubmitClass: ""
     },
     methods: {
         // formSubmitted: function() {
@@ -17,6 +18,7 @@ new Vue({
             if(this.newNameText.length > 0) {
                 this.guestName.push(this.newNameText)
                 this.newNameText = '' 
+                this.formSubmitClass = "submitted"
             }
         }
     }
