@@ -14,8 +14,10 @@ new Vue({
         //     console.log(this.newNameText)
         // } TEST IN LOGO FIRST BY RYAN
         formSubmitted: function() {
-            this.guestName.push(this.newNameText)
-            this.newNameText = ''
+            if(this.newNameText.length > 0) {
+                this.guestName.push(this.newNameText)
+                this.newNameText = '' 
+            }
         }
     }
 });
