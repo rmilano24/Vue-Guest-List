@@ -33,7 +33,7 @@
 
               <form class="form-inline" @submit.prevent="formSubmitted">
                 <input type="text" id="nameInput" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Jane Doe" v-model="newNameText">
-                <input type="submit" class="btn btn-primary" :class="formSubmitClass"></input>
+                <input type="submit" class="btn btn-primary"></input>
                 {{ newNameText }}
               </form>
             </div>
@@ -44,8 +44,10 @@
       <div class="row" :style="appStyles">
         <div class="col-sm-12">
           <div class="card">
-            <div class="card-header" :class="formSubmitClass">
-              Attending ({{ guestName.length }})
+            <div class="card-header">
+              Attending ({{ guestName.length }} / {{ eventCapacity }} )
+              <br>
+              <progress :style="{ width: eventCapacityPercentage + '%' }"></progress>
             </div>
             <div class="card-block">
               <div v-if="guestName.length > 0">
