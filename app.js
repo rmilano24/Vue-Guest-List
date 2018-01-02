@@ -26,11 +26,19 @@ new Vue({
                 this.newNameText = '' 
                 this.eventCapacityPercentage = this.guestName.length / (this.eventCapacity / 100)
             }
+        },
+        keyPressed: function() {
+            console.log('key pressed')
         }
     },
     computed: {
         sortNames: function() {
             return this.guestName.sort()
+        }
+    },
+    watch: {
+        guestName: function(data) {
+            console.log('Watch Triggered')
         }
     }
 });
