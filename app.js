@@ -57,9 +57,8 @@ var vm2 = new Vue({
         ]
     }, 
     methods: {
-        capacityChanged: function() {
-            vm1.eventCapacity = "15"
-        }
+       
     }
 })
 
+console.log(vm1)
