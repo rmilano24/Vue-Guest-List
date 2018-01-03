@@ -57,7 +57,10 @@ var vm2 = new Vue({
         ]
     }, 
     methods: {
-       
+       changeTitle: function() {
+           this.$refs.name.hidden = true
+           console.log(this.$refs)
+       }
     }
 })
 
