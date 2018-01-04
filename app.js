@@ -42,6 +42,30 @@ var vm1 = new Vue({
         formatName: function(value) {
             return value.slice(0, 1).toUpperCase() + value.slice(1).toLowerCase()
         }
+    },
+    beforeCreate: function() {
+        console.log('beforeCreate')
+    },
+    created: function() {
+        console.log('created')
+    },
+    beforeMount: function() {
+        console.log('beforeMount ')
+    },
+    mounted: function() {
+        console.log('mounted')
+    },
+    beforeUpdate: function() {
+        console.log('beforeUpdate')
+    },
+    Updated: function() {
+        console.log('updated')
+    },
+    beforeDestroy: function() {
+        console.log('before destroy')
+    },
+    destroyed: function() {
+        console.log('destroyed')
     }
 });
 
